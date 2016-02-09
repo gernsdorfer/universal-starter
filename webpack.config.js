@@ -3,7 +3,7 @@ var path = require('path');
 
 var common = {
   resolve: {
-    extensions: ['', '.ts', '.json', '.js']
+    extensions: ['', '.ts', '.json', '.js','.html']
   },
   module: {
     loaders: [
@@ -11,7 +11,13 @@ var common = {
         test: /\.ts$/,
         loader: 'ts-loader',
         exclude: [ /node_modules/ ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw-loader',
+        exclude: [ __dirname  + 'src/index.html' ]
       }
+
     ]
   }
 };

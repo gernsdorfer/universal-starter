@@ -16,9 +16,7 @@ export class XLarge {
 
 @Component({
   selector: 'home',
-  template: `
-  Home
-  `
+  template: require('./home.html')
 })
 export class Home {
 }
